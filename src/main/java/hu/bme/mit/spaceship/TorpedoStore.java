@@ -14,10 +14,11 @@ public class TorpedoStore {
 
   private int torpedoCount = 0;
 
-  private Random random = new Random();
+  private Random random;
 
   public TorpedoStore(int numberOfTorpedos){
     this.torpedoCount = numberOfTorpedos;
+    random = new Random();
 
     // update failure rate if it was specified in an environment variable
     String failureEnv = System.getenv("IVT_RATE");
